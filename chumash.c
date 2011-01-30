@@ -147,7 +147,7 @@ PHP_MINFO_FUNCTION(chumash)
 
 
 /* {{{ proto unsigned long do_djb2_hash(char *str)
-*   Compute djb2 hash of string */
+*   Compute djb2 hash of str as per http://www.cse.yorku.ca/~oz/hash.html */
 unsigned long do_djb2_hash(unsigned char *str) {
 	unsigned long hash = 5381;
 	int c;
@@ -159,7 +159,7 @@ unsigned long do_djb2_hash(unsigned char *str) {
 /* }}} */
 
 /* {{{ proto unsigned long do_djb2_hash(char *str)
-*   Compute djb2 hash of string, modulo range */
+*   Return djb2 hash of str modulo range */
 unsigned long do_djb2_hash_with_range(unsigned char *str, long range) {
 	return do_djb2_hash(str) % range;
 }
