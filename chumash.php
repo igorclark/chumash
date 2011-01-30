@@ -11,7 +11,7 @@ foreach($functions as $func) {
     echo $func."$br\n";
 }
 echo "$br\n";
-$str="piiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiisssssssssssssssspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissspiiiiiiiiiiiiiiiiissssssssssssssss";
+$str="Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. Here's a long string of text. ";
 
 echo chumash_djb2($str) . "\n";
 echo chumash_djb2_with_range($str, 30) . "\n";
