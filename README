@@ -1,0 +1,1 @@
+I wanted to use the djb2 hash function (http://www.cse.yorku.ca/~oz/hash.html) in PHP. It relies on unsigned long int overflows, but ints in PHP are fixed to 32-bit signed. So I created this wrapper extension. Largely to see how you write PHP wrappers.
