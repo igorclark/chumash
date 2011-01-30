@@ -1,3 +1,13 @@
 I wanted to use the djb2 hash function (http://www.cse.yorku.ca/~oz/hash.html) in PHP. It relies on unsigned long int overflows, but ints in PHP are fixed to 32-bit signed. So I created this wrapper extension. Largely to see how you write PHP wrappers.
 
 Ultimately this might be a place to expose C implementations of various hash functions that aren't already implemented in PHP core (http://php.net/manual/en/ref.hash.php).
+
+To use it, check out into your php-5.x.x/ext source folder ($PHP_SOURCE), then:
+
+	$ rm $PHP_SOURCE/configure
+	$ cd $PHP_SOURCE
+	$ ./buildconf --force
+	$ make
+	$ ./sapi/cli/php ./ext/chumash/chumash.php
+
+NB: the PHP function chumash_djb2() will stil return an unsigned long int forced into a signed 32-bit int, so it'll return potentially negative numbers. Use chumash_djb2_with_range to modulo the hash against your range, and all the unsigned stuff stays on the C side.
