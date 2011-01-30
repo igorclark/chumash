@@ -1,0 +1,13 @@
+// $Id$
+// vim:ft=javascript
+
+// If your extension references something external, use ARG_WITH
+// ARG_WITH("chumash", "for chumash support", "no");
+
+// Otherwise, use ARG_ENABLE
+// ARG_ENABLE("chumash", "enable chumash support", "no");
+
+if (PHP_CHUMASH != "no") {
+	EXTENSION("chumash", "chumash.c");
+}
+
