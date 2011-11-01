@@ -1,4 +1,4 @@
-I wanted to use the djb2 hash function (http://www.cse.yorku.ca/~oz/hash.html) in PHP. It relies on unsigned long int overflows, but ints in PHP are fixed to 32-bit signed. So I created this wrapper extension. Largely to see how you write PHP wrappers.
+I wanted to use the djb2 hash function (http://www.cse.yorku.ca/~oz/hash.html) in PHP. It relies on unsigned long int overflows, but ints in PHP are fixed to 32-bit signed. So I created this wrapper extension. Largely to see how you write PHP wrappers. Fairly straightforward.
 
 Ultimately this might be a place to expose C implementations of various hash functions that aren't already implemented in PHP core (http://php.net/manual/en/ref.hash.php).
 
